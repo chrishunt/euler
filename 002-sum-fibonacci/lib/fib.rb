@@ -12,6 +12,6 @@ class Fib
       previous = current
     end
 
-    return sum
+    sum
   end
 end
