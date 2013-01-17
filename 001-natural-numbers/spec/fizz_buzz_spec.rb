@@ -18,11 +18,4 @@ describe FizzBuzz do
       subject.add(1000).should == 233168
     end
   end
-
-  describe '#fizz_buzzes' do
-    it 'collects all multiples of 3 and 5' do
-      subject.fizz_buzzes(10).should == [3, 5, 6, 9]
-      subject.fizz_buzzes(12).should == [3, 5, 6, 9, 10]
-    end
-  end
 end
