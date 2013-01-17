@@ -9,26 +9,26 @@
 require 'fib'
 
 describe Fib do
-  describe '.even_sum' do
+  describe '#even_sum' do
     it 'returns sum for even fibs less than n' do
       # 1
-      Fib.even_sum(2).should == 0
+      subject.even_sum(2).should == 0
 
       # 1, 2
-      Fib.even_sum(3).should == 2
+      subject.even_sum(3).should == 2
 
       # 1, 2, 3, 5
-      Fib.even_sum(8).should == 2
+      subject.even_sum(8).should == 2
 
       # 1, 2, 3, 5, 8
-      Fib.even_sum(10).should == 10
+      subject.even_sum(10).should == 10
 
       # 1, 2, 3, 5, 8, 13, 21, 34
-      Fib.even_sum(40).should == 44
+      subject.even_sum(40).should == 44
     end
 
     it 'finds the answer!' do
-      Fib.even_sum(4000000).should == 4613732
+      subject.even_sum(4000000).should == 4613732
     end
   end
 end

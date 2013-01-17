@@ -1,5 +1,5 @@
 class Fib
-  def self.even_sum(n)
+  def even_sum(n)
     return 0 if n <= 2
 
     previous_previous = 1
