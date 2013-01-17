@@ -1,17 +1,23 @@
 class Fib
+  include Enumerable
+  attr_accessor :sequence
+
+  def initialize
+    @sequence = [1, 1]
+  end
+
   def even_sum(n)
-    return 0 if n <= 2
-
-    previous_previous = 1
-    previous = 2
-    sum = 2
-
-    while (current = previous + previous_previous) < n
-      sum += current if current % 2 == 0
-      previous_previous = previous
-      previous = current
+    inject(0) do |sum, number|
+      return sum if number >= n
+      number % 2 == 0 ? sum + number : sum
     end
+  end
 
-    sum
+  def each
+    i = -1
+    while i += 1
+      sequence[i] = sequence[i - 1] + sequence[i - 2] unless sequence[i]
+      yield sequence[i]
+    end
   end
 end

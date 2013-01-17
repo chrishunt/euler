@@ -9,6 +9,12 @@
 require 'fib'
 
 describe Fib do
+  describe '#each' do
+    it 'enumerates the fibonacci sequence' do
+      subject.take(6).should == [1, 1, 2, 3, 5, 8]
+    end
+  end
+
   describe '#even_sum' do
     it 'returns sum for even fibs less than n' do
       # 1
