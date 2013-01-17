@@ -6,17 +6,17 @@
 require 'palindrome'
 
 describe Palindrome do
-  describe '.of_multiples' do
+  describe '#of_multiples' do
     it 'works for one digit' do
-      Palindrome.of_multiples(1).should == 9
+      subject.of_multiples(1).should == 9
     end
 
     it 'works for two digits' do
-      Palindrome.of_multiples(2).should == 9009
+      subject.of_multiples(2).should == 9009
     end
 
     it 'works for three digits (finds the solution)' do
-      Palindrome.of_multiples(3).should == 906609
+      subject.of_multiples(3).should == 906609
     end
   end
 

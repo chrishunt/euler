@@ -5,7 +5,7 @@ class String
 end
 
 class Palindrome
-  def self.of_multiples(digits)
+  def of_multiples(digits)
     upper_limit = ('9' * digits).to_i
 
     largest_palindrome = 0
