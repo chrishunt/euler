@@ -9,18 +9,13 @@ class Palindrome
     upper_limit = ('9' * digits).to_i
     lower_limit = ('1' + ('0' * (digits - 1))).to_i
 
-    largest_palindrome = 0
+    (upper_limit * upper_limit).downto(lower_limit * lower_limit).each do |i|
+      next unless i.to_s.is_palindrome?
 
-    (lower_limit..upper_limit).each do |n|
-      (n..upper_limit).each do |m|
-        result = n * m
-
-        if (result > largest_palindrome) && result.to_s.is_palindrome?
-          largest_palindrome = result
-        end
+      upper_limit.downto(lower_limit).each do |j|
+        next unless (i % j == 0) && (i / j <= upper_limit)
+        return i
       end
     end
-
-    largest_palindrome
   end
 end
