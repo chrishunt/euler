@@ -19,7 +19,6 @@ describe Palindrome do
       subject.of_multiples(3).should == 906609
     end
   end
-
 end
 
 describe String do
