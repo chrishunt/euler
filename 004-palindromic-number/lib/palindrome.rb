@@ -12,7 +12,7 @@ class Palindrome
     largest_palindrome = 0
 
     upper_limit.downto(lower_limit).each do |i|
-      upper_limit.downto(largest_palindrome/i).each do |j|
+      i.downto(largest_palindrome/i).each do |j|
         result = i * j
 
         if result > largest_palindrome && result.to_s.is_palindrome?
