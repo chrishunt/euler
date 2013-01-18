@@ -15,8 +15,9 @@ class Palindrome
       i.downto(largest_palindrome/i).each do |j|
         result = i * j
 
-        if result > largest_palindrome && result.to_s.is_palindrome?
+        if result.to_s.is_palindrome?
           largest_palindrome = result
+          break
         end
       end
     end
