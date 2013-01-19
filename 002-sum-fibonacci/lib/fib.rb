@@ -9,7 +9,7 @@ class Fib
   def even_sum(n)
     inject(0) do |sum, number|
       return sum if number >= n
-      number % 2 == 0 ? sum + number : sum
+      number.even? ? sum + number : sum
     end
   end
 
